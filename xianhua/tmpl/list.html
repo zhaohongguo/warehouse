@@ -1,0 +1,106 @@
+<!-- 导航 --> 
+<div id="wrapper">
+	<div class="navbar">
+		<div class="navbar_left">
+			<span class="cur_nav"></span>
+			<span class="hover_nav"style="margin-top:8px;"></span>
+		</div>
+		<div class="navbar_center">
+			<a href="#/"><img src="./imgs/nav_logo.png"></a>
+		</div>
+		<div class="navbar_right">
+			<span class="nav_right nav_de"></span>
+			<div class="nav_right1">
+				<a href="#/shop" class="nav_gou" id="end"></a>
+				<i class="moveDiv_mark" style="display:block;font-style:normal;">{{cart.length}}</i>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 搜索框 -->
+<div class="sousuo" style="position:initial;margin-top:50px; background:#ccc;">
+	<div class="sou">
+		<div class="sou1">
+			<span></span>
+			<input class="input_1" type="text" ng-model="str1" value placeholder="盒装鲜花"  ng-model="str1">
+		</div>	
+		<span class="deng">登录</span>
+	</div>
+</div>
+<!-- 商品部分导航-->
+<div class="shop_nav" style="margin-top:0">
+	<ul>
+		<li><a href="#" style="color:#222;">综合</a></li>
+		<li><a href="#">销量</a></li>
+		<li><a href="#">价格 <span class="pj"></span></a></li>
+		<li><a href="#">最新</a></li>
+	</ul>
+</div>
+<!-- 滑块 -->
+<div direc></div>
+<div class="swiper-container" id="huakuai">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(imgs/h1.jpg); background-size:100%;"></div>
+            <div class="swiper-slide" style="background-image:url(imgs/h2.jpg); background-size:100%;"></div>
+            <div class="swiper-slide" style="background-image:url(imgs/h3.jpg);background-size:100%;"></div>
+            <div class="swiper-slide" style="background-image:url(imgs/h4.jpg);background-size:100%;"></div>
+            <div class="swiper-slide" style="background-image:url(imgs/h6.jpg);background-size:100%;"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+<!-- 商品 -->
+<div class="shop_list">
+	<dl class="shop_list_l" ng-repeat="item in data|filter:{goodsId:str1}">
+		<dt><a href="#"><img ng-src="{{item.img}}"></a></dt>
+		<dd>
+			<span>{{item.describe}}</span>
+			<div class="join_car">
+				<span>{{item.price|currency:"￥"}}</span>
+				<button ng-click="set(item.goodsId,true)"><span ng-click="flying()"></span></button>
+			</div>
+		</dd>
+	</dl>
+</div>
+<!-- 底部 -->
+<div class="footer">
+	<p>Copyright 2008-2017 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
+	<p>我希望像向日葵一样，就算悲伤也要迎着太阳</p>
+	<i>7.</i>
+</div>
+<!-- 固定 -->
+<div class="xidi">
+	<ul>
+		<li>
+			<a href="#/">
+				<span  class="btn_menu jili"></span>
+				<p>首页</p>
+			</a>
+		</li>
+		<li>
+			<a href="#/list">
+				<span  class="btn_menu jili1"></span>
+				<p>分类</p>
+			</a>
+		</li>
+		<li>
+			<a href="#/list">
+				<span  class="btn_menu jili3"></span>
+				<p>活动</p>
+			</a>
+		</li>
+		<li>
+			<a href="#/shop">
+				<span  class="btn_menu jili4"></span>
+				<p>购物袋</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span  class="btn_menu jili5"></span>
+				<p>联系我们</p>
+			</a>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,123 @@
+
+<div id="wrappers " class="wrapper-list">
+	<div id="headcl">
+		<div class="diff1 diff-choose">
+			<div class="list-left">
+				<span>分类:</span>
+				<span class="lr1">全部</span>
+				<span class="lr2">
+					<img src="imgs/arrow_down.png" alt="">
+				</span>
+			</div>
+
+			<ul>
+				<li><a href="#">芝士系列</a></li>
+				<li><a href="#">巧克力系列</a></li>
+				<li><a href="#">拿破仑系列</a></li>
+				<li><a href="#">慕斯系列</a></li>
+				<li><a href="#">乳脂系列</a></li>
+				<li><a href="#">选拼系列</a></li>
+				<li><a href="#">定制蛋糕</a></li>
+				<li><a href="#/index">阿狸系列</a></li>
+				<li class="biaoji"><a href="#/index">全部</a></li>
+			</ul>
+		</div>
+		<div class="diff2 diff-ps">
+			<div class="list-right">
+				<span></span>
+				<span class="lr1">配送方式</span>
+				<span class="lr2">
+					<img src="imgs/arrow_down.png" alt="">
+				</span>
+			</div>
+			<ul>
+				<li class="biaoji"><a href="#/index">不限</a></li>
+				<li><a href="#">incake配送</a></li>
+				<li><a href="#">全国配送</a></li>
+			</ul>
+		</div>
+	</div>
+
+		<ul class="golder yourlike dgg" style="margin-top:47px;" >
+			<li class="g-left" ng-repeat="item in data">
+				<p class="imgss"><a href="#/list"><img ng-src="{{item.img}}" alt=""></a></p>	
+				<p>{{item.describe}}</p>	
+				<p>{{item.introduce}}</p>	
+				<p>{{item.mg}}/<strong>{{item.price|currency:'￥'}}</strong></p>
+				<i class="btn-add" ng-click="add(item.goodsId,true,data)"><img src="imgs/btn-add.png" alt="" ng-click="flying()"></i>	
+			</li>
+		</ul>
+
+		<footer></footer>
+		<div id="foot-fix">
+			<ul class="u">
+				<li>
+					<a href="#/index">
+					<img src="imgs/icon-home.png" alt="">
+					</a>
+					<p>首页</p>
+				</li>
+				<li>
+					<a href="#/list">
+					<img src="imgs/icon-cake-hover.png">
+					</a>
+					<p style="color:#0055A2;">蛋糕馆</p>
+				</li>
+				<li>
+					<a href="#/listmiss">
+					<img src="imgs/icon-tea.png" alt="">
+					</a>
+					<p>思蜜</p>
+				</li>
+				<li >
+					<a href="#/shopcart" class="count">
+					<img src="imgs/icon-cart.png" alt="">
+					<span class="counts" id="end">{{coun}}</span>
+					</a>
+					<p >购物篮
+						
+					</p>
+				</li>
+				<li>
+					<a href="">
+					<img src="imgs/icon-me.png" alt="">
+					</a>
+					<p>我</p>
+				</li>
+			</ul>
+		</div>
+</div>
+ <script>
+ 	var isChecked=false;
+ 	var isCheckeds=false;
+ 	$('.diff-choose').click(function(){
+ 		$('.diff-ps ul').css('display','none');
+ 		//$(this).children('ul').toggle();
+ 		$('.diff-ps').find('.lr2').html('<img src="imgs/arrow_down.png" alt="">');
+ 		isCheckeds=false;
+ 		if(isChecked){
+ 			$(this).children('ul').css('display','none');
+ 			$(this).find('.lr2').html('<img src="imgs/arrow_down.png" alt="">');
+ 			isChecked=false;
+ 		}else{
+ 			$(this).children('ul').css('display','block');
+ 			$(this).find('.lr2').html('<img src="imgs/arrow_up.png" alt="">');
+ 			isChecked=true;
+ 		}
+ 		
+ 	})
+ 	$('.diff-ps').click(function(){
+ 		$('.diff-choose ul').css('display','none');
+ 		 $('.diff-choose').find('.lr2').html('<img src="imgs/arrow_down.png" alt="">');
+ 		 isChecked=false;
+ 		if(isCheckeds){
+ 			$(this).children('ul').css('display','none');
+ 			$(this).find('.lr2').html('<img src="imgs/arrow_down.png" alt="">');
+ 			isCheckeds=false;
+ 		}else{
+ 			$(this).children('ul').css('display','block');
+ 			$(this).find('.lr2').html('<img src="imgs/arrow_up.png" alt="">');
+ 			isCheckeds=true;
+ 		}
+ 	})
+ </script>

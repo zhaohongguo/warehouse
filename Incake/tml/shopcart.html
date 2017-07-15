@@ -1,0 +1,143 @@
+<div id="wrappers">
+
+		<div id="shopcart">
+			<ul>
+				<li>
+					<span class="btn-check"></span>
+					<p>已选蛋糕</p>
+				</li>
+				<li class="active" ng-repeat="x in butyData">
+					<span class="btn-check btn-checks checkeds" check></span>
+					<a class="item" href="">
+						<img ng-src="{{x.img}}" alt="">
+					</a>
+					<div class="xq">
+						<p>{{x.describe}}
+							<span class="summer">{{x.price*x.num|currency:'￥'}}</span>
+
+						</p>
+						<p>规格 : {{x.price}}\{{x.mg}}</p>
+						<p>
+							<span></span>
+							<button class="release" ng-click="add(x.goodsId,false,butyData)">-</button>
+							<span>{{x.num}}</span>
+							<button class="add" ng-click="add(x.goodsId,true,butyData)">+</button>
+							<input class="deletes" type="image" src="imgs/delete.png" style="width:16px;height:23px;" ng-click="x.num=0" >
+						</p>
+					</div>
+				</li>
+				<li>
+					<p>搭配套餐</p>
+				</li>
+				<li>
+					<p>已选配件</p>
+				</li>
+				
+				<li class="active" ng-repeat="item in peijian">
+					<span class="btn-check btn-checks checkeds"></span>
+					<a class="item" href="">
+						<img src="{{item.img}}" alt="">
+					</a>
+					<div class="xq">
+						<p>{{item.describe}}
+							<span class="summer">{{item.price*item.num|currency:'￥'}}</span>
+
+						</p>
+						<p>规格 : {{item.price}}\{{item.mg}}</p>
+						<p>
+							<span>数字1</span>
+							<button class="release" ng-click="add(item.goodsId,false,peijian)">-</button>
+							<span>{{item.num}}</span>
+							<button class="add" ng-click="add(item.goodsId,true,peijian)">+</button>
+							<input class="deletes" type="image" src="imgs/delete.png" style="width:16px;height:23px;" ng-click="item.num=0">
+						</p>
+					</div>
+				</li>
+
+				<li id="jiesuan">
+					<div class="first-div" style="width:40%;">
+						<span class="btn-check checkeds acc"></span>
+						<span class="allcheck abb" ng-model="sum">全选&nbsp;&nbsp;已选 : {{butyData.length+peijian.length}}</span>
+					</div>
+					<div>
+						<!-- <span></span> -->
+						<span class="price" ng-model="allPrice">总计 :{{allPrice|currency:'￥'}}</span>
+					</div>
+					<div class="gomoney">
+						<span >去结算</span>
+					</div>
+				</li>
+				
+			</ul>
+			<div class="pj"></div>
+		</div>
+
+
+		<ul class="golder yourlike" id="dgg">
+			<li class="g-left" ng-repeat="item in cart">
+				<p class="imgss"><a href="#/list"><img src="{{item.img}}" alt=""></a></p>	
+				<p>{{item.describe}}</p>	
+					
+				<p><strong>{{item.price|currency:'￥'}}</strong></p>
+				<i class="btn-add" ng-click="add(item.goodsId,true,cart)" ><img src="imgs/btn-add.png" alt="" ng-click="flying()"></i>	
+			</li>
+		</ul>
+		<!-- 底部导航 -->
+		<footer></footer>
+		<div id="foot-fix">
+			<ul class="u">
+				<li>
+					<a href="#/index">
+					<img src="imgs/icon-home.png" alt="">
+					</a>
+					<p>首页</p>
+				</li>
+				<li>
+					<a href="#/list">
+					<img src="imgs/icon-cake.png">
+					</a>
+					<p>蛋糕馆</p>
+				</li>
+				<li>
+					<a href="#/listmiss">
+					<img src="imgs/icon-tea.png" alt="">
+					</a>
+					<p>思蜜</p>
+				</li>
+				<li >
+					<a href="#/shopcart" class="count">
+					<img src="imgs/icon-cart-hover.png" alt="">
+					<span class="counts" id="end">{{coun}}</span>
+					</a>
+					<p style="color:#0055A2;" >购物篮</p>
+				</li>
+				<li>
+					<a href="">
+					<img src="imgs/icon-me.png" alt="">
+					</a>
+					<p>我</p>
+				</li>
+			</ul>
+		</div>
+</div>
+
+<script>
+	var isChecked=false;
+	$('.acc').eq(0).click(function(){
+		console.log(111)
+		$('.checkeds').each(function(index,element){
+			//isChecked=true;
+			if(isChecked){
+				$(this).css({
+					backgroundImage:"url('imgs/checked.png')"
+				})
+				isChecked=false;
+			}else{
+				$(this).css({
+					backgroundImage:"url('imgs/unchecked.png')"
+				})
+				isChecked=true;
+			}
+		});
+	})
+</script>

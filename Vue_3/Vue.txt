@@ -1,0 +1,2 @@
+Vue的ajax的GET和POST传输。
+vue更新到2.0之后，作者就宣告不再对vue-resource更新，而是推荐的axios。

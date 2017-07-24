@@ -1,0 +1,145 @@
+#wrapper{
+	max-width:750px;
+	min-width:320px;
+	height:auto;
+	margin:0 auto;
+	position:relative;
+}
+#header{
+	width:100%;
+	height:2.4rem;
+	line-height:2.4rem;
+	background:#fff;
+	border-bottom:2px solid #ccc;
+	position:fixed;
+	top:0;
+	z-index:1000;
+}
+#header .nav{
+	width:1.05rem;
+	/* height:0.85rem; */
+	padding-left:0.75rem;
+}
+.nav-la{
+	width:100%;
+	height:2.6rem;
+	background:#fff;
+	position:absolute;
+	top:2rem;
+	z-index:1000;
+	border-bottom:2px solid #ccc;
+}
+.nav-la .nav-first{
+	width:33%;
+	height:2.6rem;
+	float:left;
+}
+.nav-la .nav-first img{
+	width:1.25rem;
+	height:2.25rem;
+	display:block;
+	margin:0 auto;
+	padding-top:0.3rem;
+}
+#header .logo{
+	width:1.5rem;
+	padding-left:5.0rem;
+	padding-top:0.5rem;
+}
+#header .address{
+	width:1.0rem;
+	height:1.0rem; 
+	padding-left:2rem;
+	padding-right:0;
+}
+#header span{
+	font-size:0.6rem;
+}
+#header .car{
+	width:1.0rem;
+	padding-left:0.75rem;
+}
+
+
+/* 轮播开始 */
+#slide1{
+	width:100%;
+	height:23.0rem;
+	
+}
+#slide1 .slide2{
+	background:url(../images/lunbo1.jpg);
+	background-size:cover;
+	height:100%;
+	overflow: hidden;
+}
+#slide1 .slide3{
+	position:relative;
+	background:url(../images/lunbo2.jpg);
+	background-size:cover;
+	height:100%;
+	overflow: hidden;
+}
+#slide1 .slide4{
+	position:relative;
+	background:url(../images/lunbo3.jpg);
+	background-size:cover;
+	height:100%;
+	overflow: hidden;
+}
+/* 主体开始 */
+
+/* 主体页面导航 */
+#main{
+	width:100%;
+	height:auto;
+}
+.nav-center{
+	width:100%;
+	height:4.5rem;
+	background:#fff;
+}
+.cake{
+	float:left;
+	width:3.1rem;
+	height:100%;
+	text-align:center;
+}
+.cake img{
+	width:1.9rem;
+	height:2.1rem;
+}
+.cake p{
+	padding-top:0.6rem;
+	font-size:0.6rem;
+}
+
+
+.banner{
+	width:100%;
+	height:25.6rem;
+	position:relative;
+}
+.banner img{
+	width:100%;
+	height:6.4rem;
+}
+.tu2{
+	position:absolute;
+	top:6.4rem;
+	left:0;
+}
+.tu3{
+	position:absolute;
+	top:12.8rem;
+	left:0;
+}
+.tu4{
+	position:absolute;
+	top:19.2rem;
+	left:0;
+}
+
+/* 底部开始 */
+
+

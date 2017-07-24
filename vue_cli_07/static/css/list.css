@@ -1,0 +1,220 @@
+
+#wrapper{
+	max-width:750px;
+	min-width:320px;
+	height:auto;
+	margin:0 auto;
+}
+#header{
+	width:100%;
+	height:2.4rem;
+	line-height:2.4rem;
+	background:#fff;
+}
+#header .nav{
+	width:1.05rem;
+	/* height:0.85rem; */
+	padding-left:0.75rem;
+}
+.search{
+	width:75%;
+	height:2.4rem;
+	background:#FBF9F6;
+	position:absolute;
+	text-align:center;
+	top:0;
+	left:2rem;
+}
+#header .logo{
+	width:1.5rem;
+	padding-left:5.0rem;
+	padding-top:0.5rem;
+}
+#header .address{
+	width:1.0rem;
+	height:1.0rem; 
+	padding-left:2rem;
+	padding-right:0;
+}
+#header span{
+	font-size:0.6rem;
+}
+#header .car{
+	width:1.0rem;
+	padding-left:0.75rem;
+}
+#head{
+	wdith:100%;
+	height:auto;
+}
+#head .header-nav{
+	width:100%;
+	height:2.0rem;
+	background:#fff;
+	position:fixed;
+	top:2.44rem;
+	z-index:1000;
+}
+.nav-container{
+	width:4.2rem;
+	height:1.7rem;
+	text-align:center;
+	line-height:2.0rem;
+	font-size:0.7rem;
+}
+
+.cakes{
+	border-bottom:3px solid #442818; 
+}
+
+.u-flyer {
+	display: block;
+	width:3rem;
+	position: fixed;
+	z-index: 9999;
+}
+
+
+/* 主体页面 */
+#mainer{
+	wdith:100%;
+	height:auto;
+	background:#fff;
+}
+.title{
+	width:100%;
+	height:2.5rem;
+	background:#FBF9F6;
+	float:left;
+	margin-top:4.7rem;
+	/* border-bottom:1px solid #E9E9E9; */
+}
+.ni{
+	width:5px;
+	height:5px;
+}
+#mainer .title p{
+	text-align:center;
+}
+.dangao{
+	font-size:0.7rem;
+}
+.xian{
+	font-size:0.6rem;
+	color:#D5BFA7;
+}
+
+/* 商品列表 */
+.goods-content{
+	width:6.6rem;
+	height:10.4rem;
+	float:left;
+	margin-left:1.0rem;
+	position:relative;
+}
+.home-cake{
+	width:6.6rem;
+	height:7.25rem;
+}
+.des{
+	width:6.6rem;
+	height:1.6rem;
+	font-size:0.6rem;
+	color:#442818;
+}
+.jiage{
+	width:6.6rem;
+	height:1.0rem;
+	color:#BB9772;
+	font-size:0.5rem;
+	padding-top:0.25rem;
+}
+.list-car{
+	width:0.9rem;
+	height:0.9rem;
+	float:right;
+}
+.buywan{
+	width:6.6rem;
+	height:10.4rem;
+	background:rgba(255,255,255,0.7);
+	text-align:center;
+	line-height:10.4rem;
+	font-size:0.8rem;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+/* 季节性下线物品 */
+.title-two{
+	margin-top:0.5rem;
+}
+.title-two :nth-child(1){
+	padding-top:0.25rem;
+}
+
+.downline{
+	font-size:0.7rem;
+	text-align:center;
+}
+.eat{
+	font-size:0.6rem;
+	color:#D5BFA7;
+	text-align:center;
+}
+
+
+/* 空白页 */
+.kongbai{
+	float:left;
+	height:5.0rem;
+	width:100%;
+	background:#fff;
+	text-align:right;
+	color:#ccc;
+}
+.kongbai span{
+	display:block;
+	padding-top:3.6rem;
+}
+
+
+
+/* 底部开始 */
+#footer{
+	float:left;
+	width:100%;
+	height:7.5rem;
+	background:#414141;
+}
+.intro-content{
+	width:14.5rem;
+	height:3.5rem;
+	margin:0 auto;
+}
+.shuoming{
+	width:3.5rem;
+	height:1.5rem;
+	border:1px solid #979797;
+	float:left;
+	margin-left:0.9rem;
+	margin-top:1.5rem;
+	text-align:center;
+	color:#979797;
+	line-height:1.5rem;
+	font-size:0.6rem;
+}
+.foot{
+	width:15.0rem;
+	height:1.6rem;
+	margin:0 auto;
+}
+.foot p{
+	font-size:0.6rem;
+	color:#979797;
+	text-align:center;
+}
+.foot :first-child{
+	padding-top:1.0rem;
+}
